@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en" style="overflow-x:hidden;"><head><meta charset="utf-8"><meta name="robots" content="index, follow"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="bitcoin, faucet, satoshi, advertising, ptc, earn money, btc, paid to click"><meta name="description" content="CryptoWin is a paid-to-click (PTC) site where members can earn BTC for viewing ads and advertisers can target bitcoin users."><meta property="og:title" content="CryptoWin: Get free btc now!"><meta property="og:site_name" content="CryptoWin"><meta property="og:description" content="CryptoWin is a paid-to-click (PTC) site where members can earn BTC for viewing ads and advertisers can target bitcoin users."><meta property="og:image:type" content="image/jpeg"><meta property="og:type" content="website"><title>Register - CryptoWin</title><link rel="icon" type="image/png" sizes="56x56" href="assets/home/images/fav-icon/icon.png"><link rel="stylesheet" href="assets/bootstrap/themes/default.min.css"><link rel="stylesheet" href="assets/bootstrap/css/font-awesome.min.css"><link rel="stylesheet" href="assets/bootstrap/css/style.min.css"><link rel="stylesheet" href="assets/bootstrap/css/normalize.min.css"><link rel="stylesheet" href="css/blink.css"><link rel="stylesheet" href="cards.css"><link rel="stylesheet" href="css/gradientbtn.css"><link rel="stylesheet" href="gradient-button.css"><link rel="stylesheet" id="an_style-css" href="css/4sooaaaioelq.css" type="text/css" media="all"><link id="mystylesheet" rel="stylesheet" href="./"><link rel="stylesheet" href="css/switch.css"><script async src="lib/display.js"></script><style>body {font-weight: normal;color: rgba(48,61,83,0.7);font-size: 15px;background: #f2edf380;overflow-x: hidden;}::-webkit-scrollbar-thumb { background: #01daba ; }::-webkit-scrollbar{ width: 9px; }::-webkit-scrollbar-track { background: #f4f4f4;}@media screen and (max-width: 550px){.coinzilla{max-width:328px !important;}.bm{max-width:328px !important;}}</style><script type="text/javascript" async="true">
+(function() {
+    var host = 'www.themoneytizer.com';
+    var element = document.createElement('script');
+    var firstScript = document.getElementsByTagName('script')[0];
+    var url = 'https://quantcast.mgr.consensu.org'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
+    var uspTries = 0;
+    var uspTriesLimit = 3;
+    element.async = true;
+    element.type = 'text/javascript';
+    element.src = url;
+    firstScript.parentNode.insertBefore(element, firstScript);
+    function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+        function addFrame() {
+            var doc = win.document;
+            var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+            if (!otherCMP) {
+                if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                } else {
+                    setTimeout(addFrame, 5);
+                }
+            }
+            return !otherCMP;
+        }
+        function tcfAPIHandler() {
+            var gdprApplies;
+            var args = arguments;
+            if (!args.length) {
+                return queue;
+            } else if (args[0] === 'setGdprApplies') {
+                if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                        args[2]('set', true);
+                    }
+                }
+            } else if (args[0] === 'ping') {
+                var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                };
+                if (typeof args[2] === 'function') {
+                    args[2](retr);
+                }
+            } else {
+                queue.push(args);
+            }
+        }
+        function postMessageEventHandler(event) {
+            var msgIsString = typeof event.data === 'string';
+            var json = {};
+            try {
+                if (msgIsString) {
+                    json = JSON.parse(event.data);
+                } else {
+                    json = event.data;
+                }
+            } catch (ignore) {}
+            var payload = json.__tcfapiCall;
+            if (payload) {
+                window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                        var returnMsg = {
+                            __tcfapiReturn: {
+                                returnValue: retValue,
+                                success: success,
+                                callId: payload.callId
+                            }
+                        };
+                        if (msgIsString) {
+                            returnMsg = JSON.stringify(returnMsg);
+                        }
+                        event.source.postMessage(returnMsg, '*');
+                    },
+                    payload.parameter
+                );
+            }
+        }
+        while (win) {
+            try {
+                if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                }
+            } catch (ignore) {}
+            if (win === window.top) {
+                break;
+            }
+            win = win.parent;
+        }
+        if (!cmpFrame) {
+            addFrame();
+            win.__tcfapi = tcfAPIHandler;
+            win.addEventListener('message', postMessageEventHandler, false);
+        }
+    };
+    if (typeof module !== 'undefined') {
+        module.exports = makeStub;
+    } else {
+        makeStub();
+    }
+    var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+            setTimeout(function() {
+                if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                }
+            }, 500);
+        }
+    };
+    var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+            console.warn('USP is not accessible');
+        } else {
+            clearInterval(uspInterval);
+        }
+    };
+    if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+    }
+})();
+</script></head><body><script type="text/javascript">	
+function toggleTheme() {
+            if (localStorage.getItem('theme') === 'dark.css') {
+                setTheme('light.css');
+            } else {
+                setTheme('dark.css');
+            }
+        }
+     function setTheme(sheet){
+          document.getElementById('mystylesheet').href='index.html' + sheet;
+          console.log(sheet);
+          localStorage.setItem('theme', sheet)
+        }
+        (function () {
+            if (localStorage.getItem('theme') === 'dark.css') {
+                setTheme('dark.css');
+                document.getElementById('slider').checked = false;
+            } else {
+                setTheme('light.css');
+              document.getElementById('slider').checked = true;
+            }
+        })();
+		</script><meta name="viewport" content="width=device-width, initial-scale=1"><script type="text/javascript" src="assets/bootstrap/js/jquery.min.js"></script><style>@import url('assets/home/fonts/custom-font/bg-md/stylesheet.css');.navbar-default {background-color: #fff;border-color: transparent;box-shadow: 0 2px 6px 0 rgba(85, 85, 85, 0.0901961), 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0px 1px 11px 0px rgba(0, 0, 0, 0.06);}.navbar-default .navbar-nav>li>a {color: #f3f3f3;}.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {color: #01daba;background-color: transparent;}.navbar-default .navbar-nav>li>a {color: #929eb3;transition: all 0.2s ease-in-out;}.navbar-default .navbar-collapse, .navbar-default .navbar-form {border-color: transparent;}.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #02d4b5;}.navbar-default .navbar-toggle {border-color: transparent;}.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #02d4b5;}.navbar-default .navbar-toggle {border-color: transparent;background-color: #02d4b5;margin-right: 30px;}.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}.navbar-default .navbar-collapse, .navbar-default .navbar-form {text-align: center;}.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {color: #01daba;background-color: #f7f4f44d;}.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {color: #555;background-color: transparent;}a.linkf:visited {color: #E18728;}.navbar-default .navbar-brand {color: #1a1a1a!important;}.navbar-brand {float: left;height: 50px;padding: 15px 0px;font-size: 31px;line-height: 30px;font-family: 'brandon_grotesquemedium';font-weight: 500;margin-left: 30px;}.navbar-fixed-bottom, .navbar-fixed-top {position: fixed;margin: 0}.navbar-fixed-top {position: fixed !important;margin: 0}.container {padding-right: 0px;padding-left: 0px;margin-right: auto;}img {pointer-events: none;user-select: none;}@media screen and (max-width: 991.98px) and (min-width: 904px){.navbar .container {width: auto;padding-right: 5px;}}@media screen and (max-width: 904px) and (min-width: 767px){.navbar .container {display: flex;flex-direction: column;}.navbar-header {text-align: center;}.navbar-header img {width: 160px;margin-bottom: 7px;margin-top: 15px!important;}.navbar-nav>li>a {padding-left: 7px;padding-right: 7px;}}@media(min-width:904px){.navbar-header img {width: 130px;margin-top: 17px!important;}.navbar-nav>li>a {padding-left: 6px;padding-right: 6px;}}@media(min-width:992px){.navbar-nav>li>a {padding-left: 10px;padding-right: 10px;}}@media(min-width:1200px){.navbar-header img {width: 200px;margin-top: 4px!important;}}@media screen and (max-width: 904px) and (min-width: 767px){.navbar-left,.navbar-right {float: none !important;}.navbar-toggle {display: block;margin-top: 15px;}.navbar-collapse.collapse {display: none!important;}.navbar-nav {float: none!important;}.navbar-nav>li {float: none;}.collapse.in{display:block !important;}.navbar-nav .open .dropdown-menu {position: static;float: none;width: auto;margin-top: 0;background-color: transparent;border: 0;-webkit-box-shadow: none;box-shadow: none;}.navbar-header {text-align: left;}}@media(min-width:992px){.shrink-nav .navbar-header img {width: 135px;margin-top: 4px!important;transition: all .9s ease-in-out;}.shrink-nav .navbar-nav>li>a {padding-top: 7px;padding-bottom: 7px;transition: all .9s ease-in-out;}.shrink-nav .navbar-nav>li>a .fa {font-size: 16px!important;transition: all .9s ease-in-out;}.shrink-nav .navbar {min-height: 45px;transition: all .9s ease-in-out;}}</style><script>
+// Shrink Nav
+  var documentElem = $(document),
+    lastScrollTop = 100;
+  documentElem.on('scroll', function() {
+    var currentScrollTop = $(this).scrollTop();
+    if (currentScrollTop > lastScrollTop) {
+      $('body').addClass('shrink-nav');
+    } else {
+      $('body').removeClass('shrink-nav');
+    }
+  });
+</script><nav class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a style=" margin-left: 20px; " href="index.html"><img border="0" src="img/cwlg.png" width="200" height="auto" style=" margin-top: 4px; "></a></div><div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav" style="margin-top: -5px; margin-bottom: -5px;"><li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bullhorn" style="font-size: 25px;padding: 0px 15px;"></i> <br><font style="font-size: 15px;font-family: 'brandon_grotesquemedium';">Advertise <span class="caret"></span></font></a><ul class="dropdown-menu" role="menu"><li><a href="advertise.html"><i class="fa fa-desktop"></i> <font style="font-size: 15px; font-family: 'brandon_grotesquemedium';">Advertise PTC</font></a></li><li><a href="advertise/surf.html"><i class="fa fa-mouse-pointer"></i> <font style="font-size: 15px; font-family: 'brandon_grotesquemedium';">Advertise Surf</font></a></li></ul></li><li class="active"><a href="register.html"><i class="fa fa-user-plus" style="font-size: 25px;padding: 0px 3px;"></i> <br><font style="font-size: 15px;font-family: 'brandon_grotesquemedium';"> Register</font></a></li><li><a href="login.html"><i class="fa fa-sign-in" style="font-size: 25px;padding: 0px 3px;"></i> <br><font style="font-size: 15px;font-family: 'brandon_grotesquemedium';"> Login</font></a></li></ul></div></div></nav><style>.panel-body {padding: 15px;width: 450px;max-width: 100%;margin: auto;}.panel-default {border-color: #fff;border-radius: 7px;}.panel-default>.panel-heading {color: #02d4b5;background-color: #ffffff;border-color: #fff;font-family: 'brandon_grotesquemedium';}.btn-login {color: #fff;background-color: #02d4b5;border-color: #02d4b5;}.btn-login:hover {color: #fff;background-color: #02d4b5cc;}.btn-login:active {color: #fff;background-color: #02d4b5;}.btn-login:visited {color: #fff;background-color: #02d4b5;}.input-container {display: -ms-flexbox; /* IE10 */display: flex;width: 100%;margin-bottom: 15px;}.icon {padding: 13px;background: #02d4b5;color: white;min-width: 50px;text-align: center;}.form-control {height: 44px;font-size: 13px;border-radius: 0px;}</style><div class="container" style="margin-top: 30px;"><div class="row"><div class="col-md-6 col-md-offset-3"><div class="panel panel-default" style=" box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1); transition: all .3s ease-in-out; margin-left: 20px; margin-right: 20px; "><div class="panel-heading" style=" text-align: center; "><i class="fa fa-user-plus" aria-hidden="true" style="padding: 0px 9px;font-size: 46px;"></i> <br><span style=" text-align: center; font-size: 37px; ">Register</span></div><div class="panel-body"><form action="register.html" method="POST"><input type="hidden" name="csrfToken" value="a3eba4f2d7a3e8af72b09cf32e5d6eb7"><div class="form-group"><div class="input-container"><i class="fa fa-user icon"></i><input type="text" id="username" class="form-control" maxlength="16" placeholder="Username" value="" name="username" required></div><div class="form-group"><div class="input-container"><i class="fa fa-envelope icon"></i><input type="email" id="email" class="form-control" placeholder="Email" value="" name="email" aria-describedby="helpBlock" required></div><p style=" background-color: #fffdc4; text-align: center; font-size: 14px; border-radius: 2px; width: 423px; max-width: 100%; margin: auto; margin-top: 15px; "> <i class="fa fa-info-circle" aria-hidden="true"></i> Use a valid email address as we'll send a confirmation link.</p></div><div class="form-group"><div class="input-container"><i class="fa fa-btc icon"></i><input type="text" id="address" class="form-control" placeholder="BTC address (Direct or FaucetPay)" value="" name="address" required></div></div><div class="form-group"><div class="input-container"><i class="fa fa-key icon"></i><input type="password" id="password" class="form-control" placeholder="Password" minlength="6" name="password" required></div></div><div class="form-group"><div class="input-container"><i class="fa fa-key icon"></i><input type="password" id="password_confirmation" class="form-control" placeholder="Repeat password" minlength="6" name="password_confirm" required></div></div><center><script src="https://www.google.com/recaptcha/api.js" async defer></script><div class="g-recaptcha" data-sitekey="6Ld0OLQZAAAAAPl5QZD-4XMzJQIe_jHKP6BxBMEg"></div><span class="dropdown"><a href="#" class="dropdown-toggle" id="dropdownList" data-toggle="dropdown">Change CAPTCHA <i class="fa fa-caret-down" aria-hidden="true"></i></a><ul class="dropdown-menu" aria-labelledby="dropdownList"><li><a href="captcha_hcaptcha.html">hCAPTCHA</a></li><li><a href="captcha_imagecaptcha.html">Image CAPTCHA</a></li></ul></span></center>
+<hr><p style="background-color: #fffdc4;text-align: center;font-size: 14px;border-radius: 2px;width: 423px;max-width: 100%;margin: auto;margin-top: 15px;padding: 13px;margin-bottom: 10px;"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <b><i>Note</i></b>: It's forbidden to open Multiple Accounts and use of Tor, VPN, Hosting or Proxy connections. <br>Be sure you are not using any of these connections otherwise you are risking getting Banned.</p><button type="submit" class="btn btn-lg btn-login btn-block" style="outline: none;" id="button" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Create Account</button></form></div></div></div></div></div><div class="container"><div class="col-md-12 text-center hidden-xs"><hr><div class="row" style="margin-top:5px;"><div class="container">
+<div class="row">
+<div class="col-xs-6">
+<center>
+<div id="adm-container-1218"></div><script data-cfasync="false" async type="text/javascript" src="display/items.php_1218_522_468_60_4_0_0.js"></script>
+</center>
+</div>
+<div class="col-xs-6">
+<div class="coinzilla" data-zone="C-9925fca0e19b1d8413"></div>
+<script>
+    window.coinzilla_display = window.coinzilla_display || [];
+    var c_display_preferences = {};
+    c_display_preferences.zone = "9925fca0e19b1d8413";
+    c_display_preferences.width = "468";
+    c_display_preferences.height = "60";
+    coinzilla_display.push(c_display_preferences);
+</script>
+</div>
+</div>
+</div></div></div></div><center style="margin-left: 15px; margin-right: 15px;"><footer class="page-footer font-small stylish-color-dark pt-4" style="margin: auto; background: url(assets/home/images/home/bg4.png) no-repeat center center; position: relative; margin-bottom: -60px;"><div class="container text-center text-md-left" style="padding-top: 30px;"><div class="row" style="margin-left: 15px; margin-right: 15px;"><div class="col-md-4 mx-auto" style=" padding-top: 30px; "><div class="logo-footer"><a href="index.html"><img border="0" src="img/cwlg.png" width="200" height="auto"></a></div><p style="font-style: italic;">“Bitcoin was created to serve a highly political intent, a free and uncensored network where all can participate with equal access.” – <b>Amir Taaki</b></p></div><div class="col-md-2 mx-auto"><h5 class="ft-text-big font-weight-bold text-uppercase mt-3 mb-4">Get Started</h5><div style="text-align: center;"><div style="display: inline-block; text-align: left;"><ul class="list-unstyled"><li class="active"><a class="ft-text" href="register.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li><li><a class="ft-text" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li><li><a class="ft-text" href="advertise.html"><i class="fa fa-bullhorn" aria-hidden="true"></i> Advertise</a></li></ul></div></div></div><div class="col-md-2 mx-auto"><h5 class="ft-text-big font-weight-bold text-uppercase mt-3 mb-4">About Us</h5><div style="text-align: center;"><div style="display: inline-block; text-align: left;"><ul class="list-unstyled"><li><a class="ft-text" href="tos.html"><i class="fa fa-gavel" aria-hidden="true"></i> Terms of Service</a></li><li><a class="ft-text" href="privacy.html"><i class="fa fa-address-card" aria-hidden="true"></i> Privacy Policy</a></li><li><a class="ft-text" href="payments.html"><i class="fa fa-search-plus" aria-hidden="true"></i> Payment Proof</a></li></ul></div></div></div><div class="col-md-2 mx-auto"><h5 class="ft-text-big font-weight-bold text-uppercase mt-3 mb-4">Support</h5><div style="text-align: center;"><div style="display: inline-block; text-align: left;"><ul class="list-unstyled"><li><a class="ft-text" style="cursor: pointer;" data-toggle="modal" data-target="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li><li><a class="ft-text" href="news.html"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a></li><li><a class="ft-text" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> F.A.Q.</a></li></ul></div></div></div></div></div><center><div class="container"><div class="row" style=" display: inline-flex; "><div><a href="https://www.trustpilot.com/evaluate/cryptowin.io" target="_blank"><img border="0" src="img/trustpilot.png" width="200" height="auto"></a></div><div style=" position: relative; top: 12px; left: 0px; "><a href="//twitter.com/CryptowinI" target="_blank" style="color: #727b7a;padding: 4px;border-radius: 4px;border: 1px solid #c6cbca;"><i class="fa fa-twitter" aria-hidden="true" style=" color: #01daba; ">&nbsp;follow</i></a></div></div></div></center><div class="footer-copyright text-center py-3" style="margin-left: 15px; margin-right: 15px;">© 2021 Copyright<a style=" color: #02d4b5; font-weight: 600; text-decoration: none; " href="index.html"> CryptoWin.io</a><p style=" color: #60af5a; font-size: 14px; display: inline-block; margin-left: 20px; "><i class="fa fa-lock" aria-hidden="true"></i> 256-bit encryption</p><div class="containert"><label id="switch" class="switch"><input type="checkbox" id="slider" onchange="toggleTheme()"><span class="slider round"></span></label></div><br><div class="utc-time"><span> <i class="fa fa-clock-o" aria-hidden="true"></i> Server Time:</span> <span id="utc_time"></span> UTC</div><script type="text/javascript">
+ $(function(){
+      setInterval(function(){
+        var utcTime = $('#utc_time');
+        var localTime = $('#local_time');  
+        //put UTC time into utc_time  
+        utcTime.text(moment.utc().format('HH:mm:ss'));      
+        //get text from utc_time and conver to local timezone  
+        var formattedTime  = moment.utc(utcTime.text()).toDate();
+        formattedTime = moment(formattedTime).format('YYYY-MM-DD HH:mm:ss');
+        localTime.text(formattedTime);        
+      },1000);
+ });
+</script></div></footer><div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel"><i class="fa fa-life-ring" aria-hidden="true"></i>&nbsp;Contact Us</h4></div><p style=" text-align: center; font-size: 16px; margin-top: 25px; color: #777d7d; ">Want to get in touch? drop us an e-mail. We'd love to hear from you.</p><center style=" margin-bottom: 40px; "><a href="index.html#9ae9efeaeaf5e8eedaf9e8e3eaeef5edf3f4b4f3f5" style="color: #01daba;font-size: 25px;margin-top: 18px;text-decoration: none;"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="__cf_email__" data-cfemail="17646267677865635774656e676378607e79397e78">[email&#160;protected]</span></a></center></div></div></div></div></center><script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="assets/bootstrap/js/jquery.min.js"></script><script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script><script type="text/javascript" src="assets/bootstrap/js/bootstrap-notify.min.js"></script><script type="text/javascript" src="assets/scripts/notify.min.js"></script><script type="text/javascript" src="lbt2r3l40o3m.js"></script><script type="text/javascript">
+                            window.ga = window.ga || function () {
+                                (ga.q = ga.q || []).push(arguments);
+                            };
+                            ga.l = +new Date;
+                        ga('create', 'UA-184223111-1', 'auto');ga('send', 'pageview');</script><script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="ajax/libs/blockadblock/3.2.1/blockadblock.min.js" ></script><script type="text/javascript">
+                        function adBlockDetected() {
+                            $('body').html('<div class="col-md-6 col-md-offset-3"> <div class="panel panel-default"> <div class="panel-heading"><i class="fa fa-exclamation-circle"></i> AdBlock Detected :(</div><div class="panel-body"> <p class="panel-text">We noticed that you have an Ad Blocker turned on.<br>Please disable your Ad Blocker and reload the page!</p><button class="btn btn-primary" onclick="location.reload();"><i class="fa fa-redo"></i> Reload page</button> </div></div></div>');
+                        }
+                        if (typeof blockAdBlock === 'undefined') {
+                            adBlockDetected();
+                        } else {
+                            blockAdBlock.onDetected(adBlockDetected);
+                        }
+                    </script><script type="text/javascript">localStorage.setItem('page_id', 'register');</script><script type="text/javascript" src="assets/scripts/main.min.js"></script><noscript><style type="text/css">.container, nav {display:none;}</style><div class="text-center"><strong>Your browser does not support JavaScript!</strong></div></noscript><script src="ajax/libs/moment_js/2.18.1/moment.min.js"></script></body></html>

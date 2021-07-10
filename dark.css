@@ -1,0 +1,342 @@
+body{
+	background-color: black  !important;
+}
+/* rgb(36, 41, 46) !important */
+
+h1, h2, h3, h4, h5, h6{
+	color: #transparent !important;
+	border-top: none;
+}
+
+p, span, small{
+	color: #aeaeae !important;
+}
+
+
+hr{
+	margin: 20px;
+	background-color: #24292e !important;
+	border-top: 1px solid #24292e !important;
+}
+.card{
+	background-color: rgb(36, 41, 46) !important;
+	color: #a0a0a0 !important;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	color: #a0a0a0 !important;
+	background-color: rgb(49, 53, 61) !important;
+}
+/* background-color: rgb(36, 41, 63) !important; */
+
+.table-striped>tbody>tr:nth-of-type(even):hover{
+	color: #a0a0a0 !important;
+	background-color: rgb(49, 53, 61) !important;
+}
+.navbar.navbar-default.navbar-fixed-top{
+	background-color: rgb(36, 41, 46) !important;
+}
+.d-flex.align-items-center.purchase-popup{
+	background-color: rgb(36, 41, 46) !important;
+
+}
+li.breadcrumb-item.active{color: #a0a0a0;}
+.panel.panel-default{
+	color: #a0a0a0;
+	background-color: rgb(49, 53, 61) !important;
+	border: 0;
+}
+.panel-heading{
+	border: 0 !important;
+	color: #a0a0a0 !important;
+	background-color: rgb(49, 53, 61) !important;
+}
+.col-md-11.col-md-offset-3{
+	color: #a0a0a0 !important;
+	background-color: rgb(49, 53, 61) !important;
+}
+span.tspanspan{
+	color: #a0a0a0 !important;
+
+}
+.panel-body{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+#username.form-control, #email.form-control, #address.form-control, #password.form-control, #password_confirmation.form-control, input.form-control{
+	color: #a0a0a0 !important;
+	background-color: rgb(49, 53, 61) !important;
+}
+.col-xl-12{
+	color: #a0a0a0 !important;
+}
+.paymentcard{
+	color: #a0a0a0;
+	background-color: rgb(36, 41, 46) !important;
+}
+.col-md-8{
+	color: #a0a0a0 !important;
+}
+.col-md-8 font{
+	color: black !important;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: rgb(49, 53, 61) !important;
+}
+.depositcard{
+	color: #a0a0a0;
+	background-color: rgb(36, 41, 46) !important;
+}
+.surfcard{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+	border: 0;
+}
+p.lead{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.col-md-12.well{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+ul.dropdown-menu{
+	background-color: rgb(36, 41, 46) !important;
+}
+ul.dropdown-menu a,ul.dropdown-menu button {
+	color: #a0a0a0 !important;
+}
+ul.dropdown-menu a:hover{
+	background-color: rgb(49, 53, 61) !important;
+
+}
+.ldbtn{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.ldbtn:hover{
+	background-color: rgb(49, 53, 61) !important;
+}
+
+.offercard{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.alert.alert-warning.no-margin{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+#duration.form-control{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.myadscard{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.invoicecard{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+.adscard{
+	color: #a0a0a0 !important;
+	background-color: rgb(36, 41, 46) !important;
+}
+
+.notldbtn{
+	background-color: rgb(36, 41, 46) !important;
+color: #929eb3 !important;
+font-family: 'brandon_grotesquemedium';
+border: 0;
+padding: 25px;
+}
+.notldbtn:hover{
+	background-color:#f7f4f415 !important;
+	color: #01daba !important;
+padding: 25px;
+transition: all 0.2s ease-in-out;
+
+}
+.notldbtnli:hover{
+	z-index: 123;
+	background-color:#f7f4f415 !important;
+	color: #01daba !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-content{
+	background-color: #5d5d5d !important;
+    color: #c5c5c5 !important;
+	}
+	
+	.fpalert {
+    background-color: #24292e !important;
+    color: #6e7475 !important;;
+}
+
+.ptcclicks {
+	border: 1px solid #585858 !important;
+	color: #a0a0a0 !important;
+	background-color: #474747 !important;
+	}
+	
+	.btn1 {
+   background-image: linear-gradient(to right,#5d5331,#7f6f55) !important;
+   color: #c7c3c3 !important;
+   }
+
+	.btn1:hover {
+   background-image: linear-gradient(to right,#7f6f55,#5d5331) !important;
+   color: #c7c3c3 !important;
+   outline: none;
+   text-decoration: none;
+   }
+   
+   .card-body {
+   color: #a0a0a0 !important;
+}
+
+@media screen and (max-width: 767px)
+.table-responsive {
+    border: 1px solid #525252 !important;
+}
+
+.page-header {
+    border-bottom: 1px solid #000 !important;
+}
+
+#coinspan {
+    color: #fcfcfc !important;
+}
+
+uclr {
+    color: #afafaf !important;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #b3b4b4 !important;
+    border: 1px solid #747171 !important;
+}
+
+.pagination>li>a, .pagination>li>span {
+    background-color: #48494a !important;
+    border: 1px solid #ddd !important;
+}
+.help-block {
+    color: #a6a6a6 !important;
+}
+
+#manualbetting.tab-pane.fade.active.in{
+background: #24292e!important;
+}
+div#manualbetting.tab-pane.fade.active.in > .row, div#manualbetting.tab-pane.fade.active.in .input-group-addon{
+ background: #24292e!important;
+}
+#half_bet.btn.btn-block.btn-hilo.btn-xs, #double_bet.btn.btn-block.btn-hilo.btn-xs, #min_bet.btn.btn-block.btn-hilo.btn-xs, #max_bet.btn.btn-block.btn-hilo.btn-xs, #onWinIncrement, #onWinPayout, #onLoseIncrement, #onLosePayout{
+background: #24292e!important;
+}
+#manualbetting.tab-pane.fade.active.in .panel .panel-heading{
+background: #24292e!important;
+}
+#autobetting.tab-pane.fade.active.in .panel .panel-heading{
+background: #24292e!important;
+}
+#autobetting.tab-pane.fade.active.in{
+  background: #24292e!important;
+}
+#autobetting.tab-pane.fade.active.in .col-md-4 .panel:nth-child(even) {
+    background-color: #24292e !important;
+}
+
+.nav-tabs>li>a {
+    margin-right: 0px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 0px 0px 0 0;
+    background-color: #31383f !important;
+    color: #919191 !important;
+}
+.nav-tabs>li>a:hover {
+    background-color: #3d454d !important;
+    color: #919191 !important;
+	transition: all 0.3s ease-in-out;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    cursor: default;
+    background-color: #24292e !important;
+	color: #919191 !important;
+    border: none;
+	border-bottom: none;
+}
+
+.form-group > .row {
+    background-color: #24292e !important;
+}
+
+#bet_amount.form-control {
+    border: 1px #24292e !important;
+}
+
+#username.form-control, #email.form-control, #address.form-control, #password.form-control, #password_confirmation.form-control, input.form-control {
+    border: transparent !important;
+}
+
+.well {
+    border: 1px solid #24292e !important;
+}
+
+.table-bordered {
+    border: 1px solid #515151 !important;
+}
+.table-bordered>thead>tr>th {
+    border: 1px solid #24292e !important;
+}
+
+.row > .col-md-6 .payout, .row > .col-md-6 .payout .panel-heading {
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.account-balance {
+    background-color: #31353d !important;
+}
+
+.alert-info {
+    color: #ffffff !important;
+    background-color: #535353 !important;
+    border-color: #535353 !important;
+}
+
+.btn-click {
+    color: #a39f9f !important;
+    background-color: #535353 !important;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #535353 !important;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #646464 !important;
+}
+
+.btn-hilo {
+    color: #cac9c9 !important;
+    background-color: rgb(74 74 74) !important;
+}
+.btn-hilo:hover {
+    background-color: rgb(68 68 68) !important;
+}
+
+.inv-home {
+    background-color: #414141 !important;
+    box-shadow: 0px 2px 14px 5px rgb(214 214 214 / 40%);
+}
+
+.faucetin {
+    background-color: #535353 !important;
+}
+
+.walletinfo {
+    background-color: #d8c986 !important;
+	color: #000000 !important;
+}
